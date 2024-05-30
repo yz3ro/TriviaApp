@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "146823084640",
+    "project_id": "triviaapp-fad40",
+    "storage_bucket": "triviaapp-fad40.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:146823084640:android:be52d428742733ab16e105",
+        "android_client_info": {
+          "package_name": "com.yz3ro.triviaapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5XgO90H7OFkTx4KpmaSr8OIYYKQJvvUc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
