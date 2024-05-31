@@ -72,7 +72,7 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-test-manifest")
     implementation ("com.google.accompanist:accompanist-pager:0.21.3-beta")
     implementation ("com.google.accompanist:accompanist-pager-indicators:0.21.3-beta")
-
+    implementation ("com.google.accompanist:accompanist-systemuicontroller:0.30.0") // Accompanist'in güncel versiyonunu kontrol edin
     //Room
     implementation ("androidx.room:room-runtime:2.6.1")
     kapt ("androidx.room:room-compiler:2.6.1")

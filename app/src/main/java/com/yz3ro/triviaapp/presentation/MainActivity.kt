@@ -6,6 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.google.accompanist.systemuicontroller.rememberSystemUiController
 import com.yz3ro.triviaapp.R
 import com.yz3ro.triviaapp.presentation.feed.views.FeedScreen
 import com.yz3ro.triviaapp.presentation.onboarding.OnboardingPage
@@ -22,7 +23,9 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             TriviaAppTheme {
+                val systemUiController = rememberSystemUiController()
                 val navController = rememberNavController()
+                systemUiController.isStatusBarVisible = false
                 NavHost(navController = navController, startDestination = Screen.OnBoardingScreen.route) {
                     composable(Screen.OnBoardingScreen.route) {
                         OnboardingScreen(
