@@ -134,7 +134,7 @@ fun OnboardingScreen(pages: List<OnboardingPage>, onFinish: () -> Unit) {
                             text = pageContent.title,
                             fontSize = 22.sp,
                             style = TextStyle(
-                                color = colorResource(id = R.color.brush2)
+                                color = Color.Black
                             ),
                             fontFamily = Font(R.font.baloo2_semibold).toFontFamily()
                         )
@@ -143,7 +143,7 @@ fun OnboardingScreen(pages: List<OnboardingPage>, onFinish: () -> Unit) {
                             modifier = Modifier.padding(all = 2.dp),
                             text = pageContent.description,
                             style = TextStyle(
-                                color = colorResource(id = R.color.brush1)
+                                color = Color.Black
                             ),
                             fontSize = 14.sp,
                             fontFamily = Font(R.font.inter_regular).toFontFamily()
@@ -192,7 +192,7 @@ fun OnboardingScreen(pages: List<OnboardingPage>, onFinish: () -> Unit) {
                             }
                         }) {
                             Icon(
-                                tint = colorResource(id = R.color.brush2),
+                                tint = Color.Black,
                                 imageVector = Icons.AutoMirrored.Filled.ArrowForward,
                                 contentDescription = null
                             )
@@ -200,11 +200,11 @@ fun OnboardingScreen(pages: List<OnboardingPage>, onFinish: () -> Unit) {
                     } else {
                         OutlinedButton(
                             onClick = onFinish,
-                            border = BorderStroke(1.dp, colorResource(id = R.color.brush2)),
+                            border = BorderStroke(1.dp, Color.Black),
                         ) {
                             Text(
                                 text = "Başla",
-                                color = colorResource(id = R.color.brush2),
+                                color = Color.Black,
                                 fontSize = 14.sp,
                                 fontWeight = FontWeight.SemiBold
                             )

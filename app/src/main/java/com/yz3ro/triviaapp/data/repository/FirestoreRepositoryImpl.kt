@@ -1,6 +1,7 @@
 package com.yz3ro.triviaapp.data.repository
 
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.QuerySnapshot
 import com.google.firebase.firestore.SetOptions
 import com.yz3ro.triviaapp.domain.repository.FirestoreRepository
 import com.yz3ro.triviaapp.util.Resource
@@ -24,7 +25,7 @@ class FirestoreRepositoryImpl(private val firestore: FirebaseFirestore) : Firest
         flow {
             emit(Resource.Loading())
             val userData = hashMapOf(
-                "name" to username,
+                "username" to username,
                 "age" to age
             )
             val result = firestore.collection("users").document(uid).set(userData, SetOptions.merge()).await()
@@ -32,4 +33,15 @@ class FirestoreRepositoryImpl(private val firestore: FirebaseFirestore) : Firest
         }.catch {
             emit(Resource.Error(it.message.toString()))
         }
+
+    override fun isUsernameAvailable(username: String): Flow<Resource<Boolean>> = flow {
+        emit(Resource.Loading())
+        val querySnapshot = firestore.collection("users").whereEqualTo("username", username).get().await()
+        val isAvailable = querySnapshot.isEmpty
+        emit(Resource.Success(isAvailable))
+        println("DEBUG: Kullanıcı adı kontrolü için Firestore sorgusu yapıldı. Sonuç boş mu? $isAvailable")
+    }.catch { exception ->
+        println("DEBUG: Firestore'dan kullanıcı adı kontrolü sırasında hata oluştu: ${exception.message}")
+        emit(Resource.Error(exception.message ?: "Bilinmeyen bir hata oluştu."))
+    }
 }

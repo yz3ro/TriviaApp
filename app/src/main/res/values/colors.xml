@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="onboarding_bg_color">#D9F4FF</color>
-    <color name="onboarding_active_dot_color">#6AB9D8</color>
+    <color name="onboarding_bg_color">#D35400</color>
+    <color name="onboarding_active_dot_color">#E74C3C</color>
     <color name="onboarding_inactive_dot_color">#D9D9D9</color>
+    <color name="auth_btn">#3279A5</color>
+    <color name="sign_navbar_bg">#E74C3C</color>
+    <color name="sign_content_bg">#FF6F61</color>
+    <color name="sign_up_navbar_bg">#3498DB</color>
+    <color name="sign_up_content_bg">#9B59B6</color>
+    <color name="userdata_bg">#D8F4FF</color>
+    <color name="userdata_box">#0E4C73</color>
+    <color name="bottomnavbar_box">#FF6F61</color>
+    <color name="topappbar_bg">#E74C3C</color>
+    <color name="feed_bg">#F3F3F2</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>

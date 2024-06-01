@@ -109,4 +109,7 @@ dependencies {
     implementation ("com.google.firebase:firebase-auth-ktx:23.0.0")
     // Firebase Cloud Firestore
     implementation ("com.google.firebase:firebase-firestore-ktx:25.0.0")
+    // navbar
+    implementation("com.exyte:animated-navigation-bar:1.0.0")
+
 }

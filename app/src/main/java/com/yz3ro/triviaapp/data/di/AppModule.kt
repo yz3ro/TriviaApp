@@ -8,6 +8,7 @@ import com.yz3ro.triviaapp.domain.repository.AuthRepository
 import com.yz3ro.triviaapp.domain.repository.FirestoreRepository
 import com.yz3ro.triviaapp.domain.use_case.add_data.AddDataUseCase
 import com.yz3ro.triviaapp.domain.use_case.add_user.AddUserUseCase
+import com.yz3ro.triviaapp.domain.use_case.check_username.CheckUserNameUseCase
 import com.yz3ro.triviaapp.domain.use_case.sign_in.SignInUseCase
 import com.yz3ro.triviaapp.domain.use_case.sign_up.SignUpUseCase
 import dagger.Module
@@ -61,5 +62,10 @@ object AppModule {
     @Singleton
     fun provideAddDataUseCase(firestoreRepository: FirestoreRepository): AddDataUseCase {
         return AddDataUseCase(firestoreRepository)
+    }
+    @Provides
+    @Singleton
+    fun provideCheckUserNameUseCase(firestoreRepository: FirestoreRepository): CheckUserNameUseCase {
+        return CheckUserNameUseCase(firestoreRepository)
     }
 }

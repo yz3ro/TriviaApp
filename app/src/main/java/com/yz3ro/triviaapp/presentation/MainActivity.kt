@@ -7,12 +7,13 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
+import com.google.firebase.auth.FirebaseAuth
 import com.yz3ro.triviaapp.R
+import com.yz3ro.triviaapp.presentation.auth.views.AuthScreen
 import com.yz3ro.triviaapp.presentation.feed.views.FeedScreen
 import com.yz3ro.triviaapp.presentation.onboarding.OnboardingPage
 import com.yz3ro.triviaapp.presentation.onboarding.views.OnboardingScreen
-import com.yz3ro.triviaapp.presentation.signin.views.SignInScreen
-import com.yz3ro.triviaapp.presentation.signup.views.SignUpScreen
+
 import com.yz3ro.triviaapp.presentation.theme.TriviaAppTheme
 import com.yz3ro.triviaapp.presentation.userdata.views.UserDataScreen
 import dagger.hilt.android.AndroidEntryPoint
@@ -26,7 +27,11 @@ class MainActivity : ComponentActivity() {
                 val systemUiController = rememberSystemUiController()
                 val navController = rememberNavController()
                 systemUiController.isStatusBarVisible = false
-                NavHost(navController = navController, startDestination = Screen.OnBoardingScreen.route) {
+                val auth = FirebaseAuth.getInstance()
+                val currentUser = auth.currentUser
+                val startDestination = if (currentUser != null) Screen.FeedScreen.route else Screen.OnBoardingScreen.route
+
+                NavHost(navController = navController, startDestination = startDestination) {
                     composable(Screen.OnBoardingScreen.route) {
                         OnboardingScreen(
                             pages = listOf(
@@ -53,22 +58,19 @@ class MainActivity : ComponentActivity() {
                                 )
                             )
                         ) {
-                            navController.navigate(Screen.SignUpScreen.route) {
+                            navController.navigate(Screen.AuthScreen.route) {
                                 popUpTo(Screen.OnBoardingScreen.route) { inclusive = true }
                             }
                         }
                     }
-                    composable(Screen.SignUpScreen.route) {
-                        SignUpScreen(navController)
-                    }
-                    composable(Screen.SignInScreen.route) {
-                        SignInScreen(navController)
-                    }
-                    composable(Screen.FeedScreen.route) {
-                        FeedScreen()
+                    composable(Screen.AuthScreen.route) {
+                        AuthScreen(navController)
                     }
                     composable(Screen.UserDataScreen.route) {
-                        UserDataScreen()
+                        UserDataScreen(navController)
+                    }
+                    composable(Screen.FeedScreen.route) {
+                        FeedScreen(navController)
                     }
                 }
             }

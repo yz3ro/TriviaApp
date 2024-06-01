@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">TriviaApp</string>
+    <string name="start">Başla</string>
+    <string name="app_name">Clash of Minds</string>
+    <string name="birthday">Doğum günün ne zaman?</string>
+    <string name="choose_username">Lütfen bir kullanıcı adı seçin.</string>
+    <string name="enter_name">Adınızı giriniz</string>
+    <string name="username_already">Kullanıcı adı önceden alınmış</string>
 </resources>
