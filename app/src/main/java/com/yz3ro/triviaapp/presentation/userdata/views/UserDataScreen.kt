@@ -44,9 +44,7 @@ import com.google.accompanist.pager.rememberPagerState
 import com.yz3ro.triviaapp.R
 import com.yz3ro.triviaapp.presentation.Screen
 import com.yz3ro.triviaapp.presentation.userdata.UserDataViewModel
-import com.yz3ro.triviaapp.presentation.userdata.views.userdatascreens.EnterAgePage
-import com.yz3ro.triviaapp.presentation.userdata.views.userdatascreens.EnterNamePage
-import com.yz3ro.triviaapp.presentation.userdata.views.userdatascreens.StartButtonPage
+import com.yz3ro.triviaapp.presentation.userdata.views.userdatascreens.*
 import com.yz3ro.triviaapp.util.Resource
 import kotlinx.coroutines.launch
 

@@ -8,11 +8,15 @@
     <color name="sign_content_bg">#FF6F61</color>
     <color name="sign_up_navbar_bg">#3498DB</color>
     <color name="sign_up_content_bg">#9B59B6</color>
-    <color name="userdata_bg">#D8F4FF</color>
-    <color name="userdata_box">#0E4C73</color>
+    <color name="userdata_bg">#CCFFE2</color>
+    <color name="userdata_box">#27AE60</color>
     <color name="bottomnavbar_box">#FF6F61</color>
     <color name="topappbar_bg">#E74C3C</color>
     <color name="feed_bg">#F3F3F2</color>
+    <color name="categories_podium_bg">#9B59B6</color>
+    <color name="categories_podium_two_three_bg">#EFC8FF</color>
+    <color name="categories_podium_one_bg">#E4A3FF</color>
+    <color name="categories_rank_bg">#EFC8FF</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>

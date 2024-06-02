@@ -11,6 +11,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.yz3ro.triviaapp.R
 import com.yz3ro.triviaapp.presentation.auth.views.AuthScreen
 import com.yz3ro.triviaapp.presentation.feed.views.FeedScreen
+import com.yz3ro.triviaapp.presentation.feed.views.feedscreens.CategoriesScreen
 import com.yz3ro.triviaapp.presentation.onboarding.OnboardingPage
 import com.yz3ro.triviaapp.presentation.onboarding.views.OnboardingScreen
 
@@ -37,7 +38,7 @@ class MainActivity : ComponentActivity() {
                             pages = listOf(
                                 OnboardingPage(
                                     image = R.drawable.intro_1,
-                                    title = "Trivia Arenasına Hoş Geldin!",
+                                    title = "Clash of Minds'a Hoş Geldin!",
                                     description = "Bilginin rock yıldızı olmaya hazır mısın? En çılgın sorular, en havalı kategoriler ve sürprizlerle dolu bir serüven seni bekliyor! Bilgini konuştur, arkadaşlarını alt et ve trivia şampiyonu ol! Bu eğlence dolu meydan okumaya katıl ve bilgi dünyasının kahramanı ol! Hadi, başlıyoruz!"
                                 ),
                                 OnboardingPage(
